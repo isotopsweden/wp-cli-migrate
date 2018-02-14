@@ -1,4 +1,4 @@
-# isotopsweden/wp-cli-migrate
+# wp-cli-migrate
 
 Simple data migration for WordPress.
 
