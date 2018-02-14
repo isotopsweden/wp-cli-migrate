@@ -1,0 +1,17 @@
+{
+    "name": "isotopsweden/wp-cli-migrate",
+    "description": "Simple data migration for WordPress",
+    "type": "wp-cli-package",
+    "homepage": "https://github.com/isotopsweden/wp-cli-migrate",
+    "license": "MIT",
+    "authors": [],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "classmap": ["src"],
+        "files": ["command.php"]
+    },
+    "require": {
+        "wp-cli/wp-cli": "^1.1.0"
+    }
+}
