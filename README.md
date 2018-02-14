@@ -1,7 +1,4 @@
-isotopsweden/wp-cli-migrate
-===========================
-
-[![Build Status](https://travis-ci.org/isotopsweden/wp-cli-migrate.svg?branch=master)](https://travis-ci.org/isotopsweden/wp-cli-migrate)
+# isotopsweden/wp-cli-migrate
 
 Simple data migration for WordPress.
 
