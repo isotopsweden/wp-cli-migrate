@@ -28,6 +28,10 @@ class Migrate_Command extends \WP_CLI_Command {
 		if ( empty( $assoc_args['force'] ) ) {
 			$done_migrations = get_site_option( 'migrations_done', [] );
 		}
+		
+		if ( ! is_array( $done_migrations ) ) {
+			$done_migrations = [];
+		}
 
 		foreach ( glob( $migration_dir . '/*.php' ) as $migration_file ) {
 			if ( ! empty( $args ) ) {
