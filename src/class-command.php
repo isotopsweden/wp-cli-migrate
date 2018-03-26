@@ -16,12 +16,12 @@ class Command extends \WP_CLI_Command {
 	 * Directory for migration-files.
 	 *
 	 * ## OPTIONS
-     *
-     * [--file=<file>]
-     * : Specific file to migrate.
 	 *
-     * [--force]
-     * : Force migration.
+	 * [--file=<file>]
+	 * : Specific file to migrate.
+	 *
+	 * [--force]
+	 * : Force migration.
 	 *
 	 * @param array $args
 	 * @param array $assoc_args
@@ -43,12 +43,12 @@ class Command extends \WP_CLI_Command {
 	 * Directory for migration-files.
 	 *
 	 * ## OPTIONS
-     *
-     * [--file=<file>]
-     * : Specific file to migrate.
-     *
-     * [--force]
-     * : Force migration.
+	 *
+	 * [--file=<file>]
+	 * : Specific file to migrate.
+	 *
+	 * [--force]
+	 * : Force migration.
 	 *
 	 * @param array $args
 	 * @param array $assoc_args
