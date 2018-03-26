@@ -124,7 +124,12 @@ class Command extends \WP_CLI_Command {
 			$old   = in_array( $key, $migrations_done, true ); // old array with only basename values.
 			$class = $rc->newinstance();
 
-			if ( $old || ( isset( $migrations_done[$key . '_up'] ) && $migrations_done[$key . '_up'] ) ) {
+			// Bail if not a subclass of migration class.
+			if ( ! is_subclass_of( $class, '\Isotop\Migration\Migration' ) ) {
+				continue;
+			}
+
+			if ( $old || ( isset( $migrations_done[$key] ) && $migrations_done[$key] ) ) {
 				WP_CLI::log( 'Skipping: ' . $key );
 			} else {
 				WP_CLI::log( 'Running: ' . $key );
