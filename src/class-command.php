@@ -26,7 +26,7 @@ class Command extends \WP_CLI_Command {
 	 * @param array $args
 	 * @param array $assoc_args
 	 */
-	public function up( $args, $assoc_args ) {
+	public function up( array $args, array $assoc_args ) {
 		$assoc_args['type'] = 'up';
 
 		$this->run( $assoc_args, function( $class ) {
@@ -53,7 +53,7 @@ class Command extends \WP_CLI_Command {
 	 * @param array $args
 	 * @param array $assoc_args
 	 */
-	public function down( $args, $assoc_args ) {
+	public function down( array $args, array $assoc_args ) {
 		$assoc_args['type'] = 'down';
 
 		$this->run( $assoc_args, function( $class ) {
@@ -129,7 +129,7 @@ class Command extends \WP_CLI_Command {
 				continue;
 			}
 
-			if ( $old || ( isset( $migrations_done[$key] ) && $migrations_done[$key] ) ) {
+			if ( $old || ( isset( $migrations_done[$key] ) && $migrations_done[$key] ) && $type === 'up' ) {
 				WP_CLI::log( 'Skipping: ' . $key );
 			} else {
 				WP_CLI::log( 'Running: ' . $key );
