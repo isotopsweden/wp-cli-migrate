@@ -11,7 +11,7 @@
         "classmap": ["src"],
         "files": ["command.php"]
     },
-    "require": {
+    "require-dev": {
         "wp-cli/wp-cli": "^1.1.0"
     }
 }
