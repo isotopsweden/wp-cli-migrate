@@ -7,17 +7,29 @@ Simple data migration for WordPress.
 Create a migration file `migrations/example.php` or the directory of your choice defined in `MIGRATION_DIR`
 
 ```php
-foreach ( get_sites() as $site ) {
-	switch_to_blog( $site->blog_id );
-	update_option( 'hello', 'world' );
-	restore_current_blog();
+use Isotop\Migration\Migration;
+
+class MyClassName extends Migration {
+	public function up() {
+		echo 'up';
+	}
+
+	public function down() {
+		echo 'down';
+	}
 }
 ```
 
-Run the migration with wp cli
+Run the migration up:
 
 ```
-wp migrate run
+wp migrate up
+```
+
+Run the migration down:
+
+```
+wp migrate down
 ```
 
 ## Installing
