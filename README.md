@@ -11,11 +11,11 @@ use Isotop\Migration\Migration;
 
 class MyClassName extends Migration {
 	public function up() {
-		echo 'up';
+		update_option( 'key', 'value' );
 	}
 
 	public function down() {
-		echo 'down';
+		delete_option( 'key' );
 	}
 }
 ```
